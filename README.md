@@ -65,6 +65,10 @@ conda env update --file environment.yml
 
 You can download [European](https://data.broadinstitute.org/alkesgroup/LDSCORE/eur_w_ld_chr.tar.bz2) and [East Asian LD Scores](https://data.broadinstitute.org/alkesgroup/LDSCORE/eas_ldscores.tar.bz2) from 1000 Genomes [here](https://data.broadinstitute.org/alkesgroup/LDSCORE/). These LD Scores are suitable for basic LD Score analyses (the LD Score regression intercept, heritability, genetic correlation, cross-sex genetic correlation). You can download partitioned LD Scores for partitioned heritability estimation [here](http://data.broadinstitute.org/alkesgroup/LDSCORE/).
 
+## FAQ
+
+### How to find SNP position from rsID (in HapMap3 snplist)?
+https://ftp.ncbi.nlm.nih.gov/snp/organisms/human_9606_b151_GRCh37p13/VCF/
 
 ## Support
 
@@ -117,3 +121,4 @@ This project is licensed under GNU GPL v3.
 Brendan Bulik-Sullivan (Broad Institute of MIT and Harvard)
 
 Hilary Finucane (MIT Department of Mathematics)
+
