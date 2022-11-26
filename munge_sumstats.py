@@ -251,7 +251,7 @@ def parse_dat(dat_gen, convert_colname, merge_alleles, log, args):
         ii = np.array([True for i in xrange(len(dat))])
         if args.merge_alleles:
             old = ii.sum()
-            ii = dat.SNP.isin(merge_alleles.SNP)
+            ii = dat.SNP.isin(merge_alleles.SNP) # time consuming when dat is large (i.e. chunksize)
             drops['MERGE'] += old - ii.sum()
             if ii.sum() == 0:
                 continue
@@ -480,7 +480,7 @@ parser.add_argument('--merge-alleles', default=None, type=str,
                     "and all alleles will be matched to the --merge-alleles file alleles.")
 parser.add_argument('--n-min', default=None, type=float,
                     help='Minimum N (sample size). Default is (90th percentile N) / 2.')
-parser.add_argument('--chunksize', default=5e6, type=int,
+parser.add_argument('--chunksize', default=5e5, type=int,
                     help='Chunksize.')
 
 # optional args to specify column names
